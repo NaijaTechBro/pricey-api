@@ -19,6 +19,7 @@ const http = require('http');
 const path = require('path');
 const { logger, logEvents } = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
+const corsOptions = require('./config/corsOptions');
 const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
 
@@ -39,7 +40,7 @@ app.use(logger)
 
 
 // Cross Origin Resource Sharing
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.json({ limit: "30mb", extended: true}))
 app.use(helmet());
