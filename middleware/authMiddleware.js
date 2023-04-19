@@ -68,17 +68,17 @@ const verifiedOnly = (req, res, next) => {
     };
 
 
-// const authorizeRoles = (roles) => {
-//     return (req, res, next) => {
-//         if(!roles.includes(req.user.role)) {
-//             return res.json({
-//                 message: `${req.user.role} is not allowed to access to this resource`
-//             })
-//         }
-//         next();
-//     };
+const authorizeRoles = (roles) => {
+    return (req, res, next) => {
+        if(!roles.includes(req.user.role)) {
+            return res.json({
+                message: `${req.user.role} is not allowed to access to this resource`
+            })
+        }
+        next();
+    };
 
-// };
+};
 
 module.exports = {
     isAuthenticatedUser,
@@ -86,6 +86,6 @@ module.exports = {
     verifiedOnly,
     businessOnly,
     clientOnly,
-    // authorizeRoles,
+    authorizeRoles,
 
 }
