@@ -12,9 +12,21 @@
     "type": "git",
     "url": "https://github.com/NaijaTechBro/pricey-api.git"
   },
-  "keywords": [],
+  "keywords": [
+    "testing",
+    "expressjs",
+    "nodejs",
+    "mongodb",
+    "mongoose",
+    "jest",
+    "pricing"
+  ],
   "author": "NaijaTechBro",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaijaTechBro/seemetracker-api.git/issues"
+  },
+  "homepage": "https://github.com/NaijaTechBro/seemetracker-api.git#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
     "chalk": "^3.0.0",
